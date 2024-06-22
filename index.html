@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel o Tijera</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Piedra, Papel o Tijera</h1></header>
+
+    <div class="selectGames"><label>Cuantas partidas desea jugar:  </label><input type="number" name="nGames" value="0"></div>
+    <div class="machineButton"><button type="button" id="singlePlayer" class="playButton" class="selected">Jugar contra la maquina</button>
+    <button type="button" id="multiPlayer" class="playButton" class="unselected">Jugar 2 jugadores</button></div>
+
+    <div id="playerImg">
+        <img class="selected" src="assets/img/rock.png">
+        <img class="unselected" src="assets/img/paper.png">
+        <img class="unselected" src="assets/img/scissors.png">
+    </div>
+
+    <div class="listo"><span>Piedra, Papel o Tijera...  </span><button type="button" id="buttonGo">Go</button></div>
+    <div id="computerImg">
+        <img src="assets/img/machine-initial.webp">
+    </div>
+
+    <ul id="history">
+        
+    </ul>
+    <section class="information">
+        <div class="nPartidas"><span>Partida Número: <span id="partidas">1</span></span></div>
+        <div class="ganador"><span>Va ganando: <span id="winner"></span></span></div>
+        <div></div>
+    </section>
+    <div id="resultDiv" class="hidden">
+        <img class="selected shake" src="assets/img/rock.png">
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

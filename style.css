@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  header {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 10px 0 50px 0;
+    display: flex;
+    font-size: 1.2rem;
+    width: 75%;
+    color: white;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #1b288a;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+  }
+  
+  img {
+    height: 10vh;
+    width: 10vh;
+  }
+  
+  #playerImg {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 1%;
+    padding: 10px;
+    width: 30%;
+  }
+  
+  .selected {
+    opacity: 1;
+    border: #1b288a 5px solid;
+    border-radius: 5px;
+  }
+  
+  .unselected {
+    opacity: 0.5;
+  }
+  
+  .selectGames {
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 1%;
+  }
+  
+  .selectGames input{
+    border-radius: 10px;
+    font-size: 100%;
+    margin: 0;
+}
+  
+  .machineButton {
+    margin: 0;
+    margin-bottom: 1%;
+    padding: 10px;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .machineButton button {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #2e3fc0;
+    color: white;
+    border: none;
+  }
+  
+  .machineButton button:hover {
+    background-color: #18279b;
+  }
+  
+  .listo {
+    margin: 0;
+    margin-bottom: 1%;
+    padding: 10px;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .listo span {
+    font-size: 2rem;
+  }
+  
+  .listo button {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #2e3fc0;
+    color: white;
+    border: none;
+  }
+  
+  .listo button:hover {
+    background-color: #18279b;
+  }
+  
+  #computerImg {
+    margin-top: 10px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    header {
+      width: 90%;
+      font-size: 1rem;
+      height: auto;
+      padding: 10px;
+    }
+  
+    img {
+      height: 8vh;
+      width: 8vh;
+    }
+  
+    .selectGames {
+      font-size: 1.5rem;
+    }
+  
+    .selectGames input {
+      font-size: 0.9rem;
+    }
+  
+    .machineButton {
+      width: 60%;
+    }
+  
+    .listo {
+      width: 60%;
+    }
+  
+    #playerImg, .listo {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      width: 100%;
+      font-size: 0.8rem;
+      padding: 10px;
+    }
+  
+    img {
+      height: 6vh;
+      width: 6vh;
+    }
+  
+    .selectGames {
+      font-size: 1.2rem;
+    }
+  
+    .selectGames input {
+      font-size: 0.8rem;
+    }
+  
+    .machineButton {
+      width: 80%;
+    }
+  
+    .listo {
+      width: 80%;
+    }
+  
+    #playerImg, .listo {
+      width: 90%;
+    }
+  }
+  .information{
+    position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      color: black;
+      text-align: center;
+      padding: 20px;
+      font-size: 2rem;
+  }
+  @keyframes shake {
+    0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+    20% { transform: translate(-50%, -50%) rotate(-10deg); }
+    40% { transform: translate(-50%, -50%) rotate(10deg); }
+    60% { transform: translate(-50%, -50%) rotate(-10deg); }
+    80% { transform: translate(-50%, -50%) rotate(10deg); }
+}
+
+#resultDiv {
+    display: none; /* inicialmente oculto */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+.shake {
+    transform: translate(-50%, -50%);
+    animation: shake 0.5s;
+}
+.hidden img{
+    margin-top: 50%;
+    margin-left: 50%;
+    margin-bottom: 0;
+}
